@@ -26,15 +26,7 @@ function set_specific_params() {
     fi
     case "$SUBMODE" in
         base)
-            ;;
-        solve)
-            export MASSIVETEST_AUX_ARGS="-mode solver"
-            ;;
-        spmv)
-            export MASSIVETEST_AUX_ARGS="-mode spmv"
-            ;;
-        hypre)
-            export MASSIVETEST_AUX_ARGS="-mode hypre"
+            export MASSIVETEST_AUX_ARGS="-mode blas"
             ;;
         blas)
             export MASSIVETEST_AUX_ARGS="-mode blas"
