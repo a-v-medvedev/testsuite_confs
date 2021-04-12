@@ -1,0 +1,33 @@
+---
+axpby/NV1/100:
+    values:
+        blas/RES_norm[0]: 
+
+axpby/NV2/100:
+    values:
+        blas/RES_norm[1]: 
+
+axpby/NV4/100:
+    values:
+        blas/RES_norm[3]: 
+
+axpby/NV8/100:
+    values:
+        blas/RES_norm[7]: 
+
+axpby/NV1/200:
+    values:
+        blas/RES_norm[0]: 
+
+axpby/NV2/200:
+    values:
+        blas/RES_norm[1]: 
+
+axpby/NV4/200:
+    values:
+        blas/RES_norm[3]: 
+
+axpby/NV8/200:
+    values:
+        blas/RES_norm[7]: 
+...
