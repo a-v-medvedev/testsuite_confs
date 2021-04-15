@@ -1,33 +1,161 @@
 ---
+axpby/NV1/@@1000000:
+    values:
+        blas/RES_norm[0]: 28860.7110206151
+
+axpby/NV1/@@10000:
+    values:
+        blas/RES_norm[0]: 2892.4845112247
+
+axpby/NV1/@@1000:
+    values:
+        blas/RES_norm[0]: 913.3069679444
+
 axpby/NV1/@@100:
     values:
-        blas/RES_norm[0]: 290.9902896264939
-
-axpby/NV2/@@100:
-    values:
-        blas/RES_norm[1]: 293.61986219194137
-
-axpby/NV4/@@100:
-    values:
-        blas/RES_norm[3]: 297.30735248767155
-
-axpby/NV8/@@100:
-    values:
-        blas/RES_norm[7]: 338.18610357867937
+        blas/RES_norm[0]: 290.9902896265
 
 axpby/NV1/@@200:
     values:
-        blas/RES_norm[0]: 411.48243390219108
+        blas/RES_norm[0]: 411.4824339022
+
+axpby/NV2/@@1000000:
+    values:
+        blas/RES_norm[1]: 28867.8706521855
+
+axpby/NV2/@@10000:
+    values:
+        blas/RES_norm[1]: 2879.7025643006
+
+axpby/NV2/@@1000:
+    values:
+        blas/RES_norm[1]: 899.7281462932
+
+axpby/NV2/@@100:
+    values:
+        blas/RES_norm[1]: 293.6198621919
 
 axpby/NV2/@@200:
     values:
-        blas/RES_norm[1]: 417.61336690287834
+        blas/RES_norm[1]: 417.6133669029
+
+axpby/NV4/@@1000000:
+    values:
+        blas/RES_norm[3]: 28865.1691045590
+
+axpby/NV4/@@10000:
+    values:
+        blas/RES_norm[3]: 2893.7987533450
+
+axpby/NV4/@@1000:
+    values:
+        blas/RES_norm[3]: 904.7459779921
+
+axpby/NV4/@@100:
+    values:
+        blas/RES_norm[3]: 297.3073524877
 
 axpby/NV4/@@200:
     values:
-        blas/RES_norm[3]: 436.24341612235224
+        blas/RES_norm[3]: 436.2434161224
+
+axpby/NV8/@@1000000:
+    values:
+        blas/RES_norm[7]: 28866.4063342965
+
+axpby/NV8/@@10000:
+    values:
+        blas/RES_norm[7]: 2909.6575032352
+
+axpby/NV8/@@1000:
+    values:
+        blas/RES_norm[7]: 913.1893127385
+
+axpby/NV8/@@100:
+    values:
+        blas/RES_norm[7]: 338.1861035787
 
 axpby/NV8/@@200:
     values:
-        blas/RES_norm[7]: 444.25537852492022
+        blas/RES_norm[7]: 444.2553785249
+
+axpbypcz/NV1/@@1000000:
+    values:
+        blas/RES_norm[0]: 3312.2627607534
+
+axpbypcz/NV1/@@10000:
+    values:
+        blas/RES_norm[0]: 331.9623250357
+
+axpbypcz/NV1/@@1000:
+    values:
+        blas/RES_norm[0]: 104.8176760752
+
+axpbypcz/NV1/@@100:
+    values:
+        blas/RES_norm[0]: 33.3961384175
+
+axpbypcz/NV1/@@200:
+    values:
+        blas/RES_norm[0]: 47.2246834648
+
+axpbypcz/NV2/@@1000000:
+    values:
+        blas/RES_norm[1]: 3313.0844515639
+
+axpbypcz/NV2/@@10000:
+    values:
+        blas/RES_norm[1]: 330.4953768799
+
+axpbypcz/NV2/@@1000:
+    values:
+        blas/RES_norm[1]: 103.2592728447
+
+axpbypcz/NV2/@@100:
+    values:
+        blas/RES_norm[1]: 33.6979270768
+
+axpbypcz/NV2/@@200:
+    values:
+        blas/RES_norm[1]: 47.9283134292
+
+axpbypcz/NV4/@@1000000:
+    values:
+        blas/RES_norm[3]: 3312.7744025289
+
+axpbypcz/NV4/@@10000:
+    values:
+        blas/RES_norm[3]: 332.1131569133
+
+axpbypcz/NV4/@@1000:
+    values:
+        blas/RES_norm[3]: 103.8351552983
+
+axpbypcz/NV4/@@100:
+    values:
+        blas/RES_norm[3]: 34.1211299832
+
+axpbypcz/NV4/@@200:
+    values:
+        blas/RES_norm[3]: 50.0664318635
+
+axpbypcz/NV8/@@1000000:
+    values:
+        blas/RES_norm[7]: 3312.9163959118
+
+axpbypcz/NV8/@@10000:
+    values:
+        blas/RES_norm[7]: 333.9332211056
+
+axpbypcz/NV8/@@1000:
+    values:
+        blas/RES_norm[7]: 104.8041731176
+
+axpbypcz/NV8/@@100:
+    values:
+        blas/RES_norm[7]: 38.8126694553
+
+axpbypcz/NV8/@@200:
+    values:
+        blas/RES_norm[7]: 50.9859422902
 ...
