@@ -26,9 +26,10 @@ function set_specific_params() {
     fi
     case "$SUBMODE" in
         base)
+            export MASSIVETEST_AUX_ARGS="-mode spmv"
             ;;
-        solve)
-            export MASSIVETEST_AUX_ARGS="-mode solver"
+        spmv)
+            export MASSIVETEST_AUX_ARGS="-mode spmv"
             ;;
         *) fatal "Unknown submode: $SUBMODE"
             ;;
