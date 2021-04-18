@@ -1,0 +1,33 @@
+---
+spmv/NV1/@10x10x10:
+    values:
+        spmv/Y_norm[0]: 0.0000000000
+
+spmv/NV1/@5x5x5:
+    values:
+        spmv/Y_norm[0]: 0.0000000000
+
+spmv/NV2/@10x10x10:
+    values:
+        spmv/Y_norm[1]: 31.6227766017
+
+spmv/NV2/@5x5x5:
+    values:
+        spmv/Y_norm[1]: 11.1803398875
+
+spmv/NV4/@10x10x10:
+    values:
+        spmv/Y_norm[3]: 94.8683298051
+
+spmv/NV4/@5x5x5:
+    values:
+        spmv/Y_norm[3]: 33.5410196625
+
+spmv/NV8/@10x10x10:
+    values:
+        spmv/Y_norm[7]: 221.3594362118
+
+spmv/NV8/@5x5x5:
+    values:
+        spmv/Y_norm[7]: 78.2623792125
+...

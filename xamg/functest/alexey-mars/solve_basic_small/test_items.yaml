@@ -46,5 +46,40 @@ pjacobi/NV8/@5x5x5:
         solver/iters: 5
         solver/abs_residual[7]: 3.2171750803430098e-07
         solver/residual[7]: 3.2171806370887786e-07
-       
+
+pmg_cheb/NV1/@10x10x10:
+    values:
+        solver/iters: 5
+        solver/abs_residual[0]: 0.0000000055
+        solver/residual[0]: 0.0000000055
+
+pmg_cheb/NV1/@5x5x5:
+    values:
+        solver/iters: 3
+        solver/abs_residual[0]: 0.0000000422
+        solver/residual[0]: 0.0000000422
+
+pmg_cheb/NV2/@10x10x10:
+    values:
+        solver/iters: 5
+        solver/abs_residual[1]: 0.0000115764
+        solver/residual[1]: 0.0000115764
+
+pmg_cheb/NV2/@5x5x5:
+    values:
+        solver/iters: 3
+        solver/abs_residual[1]: 0.0000003768
+        solver/residual[1]: 0.0000003768
+
+pmg_cheb/NV8/@10x10x10:
+    values:
+        solver/iters: 5
+        solver/abs_residual[7]: 0.0001065317
+        solver/residual[7]: 0.0001065317
+
+pmg_cheb/NV8/@5x5x5:
+    values:
+        solver/iters: 3
+        solver/abs_residual[7]: 0.0000049903
+        solver/residual[7]: 0.0000049903
 ...

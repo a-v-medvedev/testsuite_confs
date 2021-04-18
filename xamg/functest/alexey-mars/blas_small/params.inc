@@ -37,25 +37,25 @@ export MASSIVE_TESTS_PPNS=1
 
 
 # Sizes:
-export MASSIVE_TESTS_SIZES="@10x10x10 @5x5x5"
-export MASSIVE_TESTS_REPEATS="3"
+export MASSIVE_TESTS_SIZES="@@100 @@200 @@1000 @@10000 @@1000000"
+export MASSIVE_TESTS_REPEATS="100 100 50 10 5"
 
 
 # Workloads, sections and params:
-WORKLOADS_BASE="pjacobi pmg_cheb"
-CONFS_BASE="NV1 NV2 NV8"
-SECTIONS_BASE="solver" 
+WORKLOADS_BASE="axpby axpbypcz"
+CONFS_BASE="NV1 NV2 NV4 NV8"
+SECTIONS_BASE="blas" 
 PARAMETERS_BASE="ALL"
 
-WORKLOADS_COMPETING="pjacobi pmg_cheb"
-CONFS_COMPETING="NV1 NV2 NV8"
-SECTIONS_COMPETING="solver" 
+WORKLOADS_COMPETING="axpby axpbypcz"
+CONFS_COMPETING="NV1 NV2 NV4 NV8"
+SECTIONS_COMPETING="blas" 
 PARAMETERS_COMPETING="ALL"
 
 
 # Modes and submodes:
-MODES="1:1 2:2 1:4"
-SUBMODES="solve"
+MODES="1:1 1:2 2:1 4:1 1:4 2:2"
+SUBMODES="blas"
 
 
 # Output file structure:

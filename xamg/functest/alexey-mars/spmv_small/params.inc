@@ -42,20 +42,20 @@ export MASSIVE_TESTS_REPEATS="3"
 
 
 # Workloads, sections and params:
-WORKLOADS_BASE="pjacobi pmg_cheb"
-CONFS_BASE="NV1 NV2 NV8"
-SECTIONS_BASE="solver" 
+WORKLOADS_BASE="spmv"
+CONFS_BASE="NV1 NV2 NV4 NV8"
+SECTIONS_BASE="spmv" 
 PARAMETERS_BASE="ALL"
 
-WORKLOADS_COMPETING="pjacobi pmg_cheb"
-CONFS_COMPETING="NV1 NV2 NV8"
-SECTIONS_COMPETING="solver" 
+WORKLOADS_COMPETING="spmv"
+CONFS_COMPETING="NV1 NV2 NV4 NV8"
+SECTIONS_COMPETING="spmv" 
 PARAMETERS_COMPETING="ALL"
 
 
 # Modes and submodes:
-MODES="1:1 2:2 1:4"
-SUBMODES="solve"
+MODES="1:1 1:2 2:1 4:1 1:4 2:2"
+SUBMODES="spmv"
 
 
 # Output file structure:

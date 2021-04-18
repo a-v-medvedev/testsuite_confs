@@ -1,0 +1,17 @@
+---
+solver_params:
+  method: PBiCGStab
+  max_iters: 20
+preconditioner_params:
+  method: MultiGrid
+  max_iters: 1
+  mg_agg_num_levels: 2
+  mg_coarse_matrix_size: 500
+  mg_num_paths: 2
+pre_smoother_params:
+  method: Chebyshev
+  polynomial_order: 2
+post_smoother_params:
+  method: Chebyshev
+  polynomial_order: 2
+
