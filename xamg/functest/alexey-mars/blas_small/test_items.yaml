@@ -1,161 +1,161 @@
 ---
 axpby/NV1/@@1000000:
     values:
-        blas/RES_norm[0]: 28860.7110206151
+        blas/RES_csum[0]: 9259214381212913664.0000000000
 
 axpby/NV1/@@10000:
     values:
-        blas/RES_norm[0]: 2892.4845112247
+        blas/RES_csum[0]: 18418609041470767104.0000000000
 
 axpby/NV1/@@1000:
     values:
-        blas/RES_norm[0]: 913.3069679444
+        blas/RES_csum[0]: 9291703960186832896.0000000000
 
 axpby/NV1/@@100:
     values:
-        blas/RES_norm[0]: 290.9902896265
+        blas/RES_csum[0]: 9250375723722541056.0000000000
 
 axpby/NV1/@@200:
     values:
-        blas/RES_norm[0]: 411.4824339022
+        blas/RES_csum[0]: 9249566278955794432.0000000000
 
 axpby/NV2/@@1000000:
     values:
-        blas/RES_norm[1]: 28867.8706521855
+        blas/RES_csum[1]: 18314065220509952000.0000000000
 
 axpby/NV2/@@10000:
     values:
-        blas/RES_norm[1]: 2879.7025643006
+        blas/RES_csum[1]: 18376345020413949952.0000000000
 
 axpby/NV2/@@1000:
     values:
-        blas/RES_norm[1]: 899.7281462932
+        blas/RES_csum[1]: 9190579021636950016.0000000000
 
 axpby/NV2/@@100:
     values:
-        blas/RES_norm[1]: 293.6198621919
+        blas/RES_csum[1]: 9205500055530655744.0000000000
 
 axpby/NV2/@@200:
     values:
-        blas/RES_norm[1]: 417.6133669029
+        blas/RES_csum[1]: 29935669843058956.0000000000
 
 axpby/NV4/@@1000000:
     values:
-        blas/RES_norm[3]: 28865.1691045590
+        blas/RES_csum[3]: 18311031957942298624.0000000000
 
 axpby/NV4/@@10000:
     values:
-        blas/RES_norm[3]: 2893.7987533450
+        blas/RES_csum[3]: 9240249024977952768.0000000000
 
 axpby/NV4/@@1000:
     values:
-        blas/RES_norm[3]: 904.7459779921
+        blas/RES_csum[3]: 9234639696857552896.0000000000
 
 axpby/NV4/@@100:
     values:
-        blas/RES_norm[3]: 297.3073524877
+        blas/RES_csum[3]: 9229845186112780288.0000000000
 
 axpby/NV4/@@200:
     values:
-        blas/RES_norm[3]: 436.2434161224
+        blas/RES_csum[3]: 18420849883005085696.0000000000
 
 axpby/NV8/@@1000000:
     values:
-        blas/RES_norm[7]: 28866.4063342965
+        blas/RES_csum[7]: 9297499219932442624.0000000000
 
 axpby/NV8/@@10000:
     values:
-        blas/RES_norm[7]: 2909.6575032352
+        blas/RES_csum[7]: 18422877620775561216.0000000000
 
 axpby/NV8/@@1000:
     values:
-        blas/RES_norm[7]: 913.1893127385
+        blas/RES_csum[7]: 18412199076916570112.0000000000
 
 axpby/NV8/@@100:
     values:
-        blas/RES_norm[7]: 338.1861035787
+        blas/RES_csum[7]: 9241292937401284608.0000000000
 
 axpby/NV8/@@200:
     values:
-        blas/RES_norm[7]: 444.2553785249
+        blas/RES_csum[7]: 34982283639842396.0000000000
 
 axpbypcz/NV1/@@1000000:
     values:
-        blas/RES_norm[0]: 3312.2627607534
+        blas/RES_csum[0]: 18311317276648568832.0000000000
 
 axpbypcz/NV1/@@10000:
     values:
-        blas/RES_norm[0]: 331.9623250357
+        blas/RES_csum[0]: 9294404818800721920.0000000000
 
 axpbypcz/NV1/@@1000:
     values:
-        blas/RES_norm[0]: 104.8176760752
+        blas/RES_csum[0]: 18397643663342039040.0000000000
 
 axpbypcz/NV1/@@100:
     values:
-        blas/RES_norm[0]: 33.3961384175
+        blas/RES_csum[0]: 18419399517612627968.0000000000
 
 axpbypcz/NV1/@@200:
     values:
-        blas/RES_norm[0]: 47.2246834648
+        blas/RES_csum[0]: 18412353202974531584.0000000000
 
 axpbypcz/NV2/@@1000000:
     values:
-        blas/RES_norm[1]: 3313.0844515639
+        blas/RES_csum[1]: 9245918194889981952.0000000000
 
 axpbypcz/NV2/@@10000:
     values:
-        blas/RES_norm[1]: 330.4953768799
+        blas/RES_csum[1]: 18415684060027504640.0000000000
 
 axpbypcz/NV2/@@1000:
     values:
-        blas/RES_norm[1]: 103.2592728447
+        blas/RES_csum[1]: 29042689584571308.0000000000
 
 axpbypcz/NV2/@@100:
     values:
-        blas/RES_norm[1]: 33.6979270768
+        blas/RES_csum[1]: 31341748853411888.0000000000
 
 axpbypcz/NV2/@@200:
     values:
-        blas/RES_norm[1]: 47.9283134292
+        blas/RES_csum[1]: 9176874712603815936.0000000000
 
 axpbypcz/NV4/@@1000000:
     values:
-        blas/RES_norm[3]: 3312.7744025289
+        blas/RES_csum[3]: 18333251231886880768.0000000000
 
 axpbypcz/NV4/@@10000:
     values:
-        blas/RES_norm[3]: 332.1131569133
+        blas/RES_csum[3]: 18396230067443875840.0000000000
 
 axpbypcz/NV4/@@1000:
     values:
-        blas/RES_norm[3]: 103.8351552983
+        blas/RES_csum[3]: 9230207215852851200.0000000000
 
 axpbypcz/NV4/@@100:
     values:
-        blas/RES_norm[3]: 34.1211299832
+        blas/RES_csum[3]: 9256872021805021184.0000000000
 
 axpbypcz/NV4/@@200:
     values:
-        blas/RES_norm[3]: 50.0664318635
+        blas/RES_csum[3]: 9255456276459462656.0000000000
 
 axpbypcz/NV8/@@1000000:
     values:
-        blas/RES_norm[7]: 3312.9163959118
+        blas/RES_csum[7]: 18339383742567180288.0000000000
 
 axpbypcz/NV8/@@10000:
     values:
-        blas/RES_norm[7]: 333.9332211056
+        blas/RES_csum[7]: 18416147678850486272.0000000000
 
 axpbypcz/NV8/@@1000:
     values:
-        blas/RES_norm[7]: 104.8041731176
+        blas/RES_csum[7]: 9256129909191088128.0000000000
 
 axpbypcz/NV8/@@100:
     values:
-        blas/RES_norm[7]: 38.8126694553
+        blas/RES_csum[7]: 9243874404407156736.0000000000
 
 axpbypcz/NV8/@@200:
     values:
-        blas/RES_norm[7]: 50.9859422902
+        blas/RES_csum[7]: 9203900490879979520.0000000000
 ...
