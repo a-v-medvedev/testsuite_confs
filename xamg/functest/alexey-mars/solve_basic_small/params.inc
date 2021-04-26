@@ -42,12 +42,12 @@ export MASSIVE_TESTS_REPEATS="3"
 
 
 # Workloads, sections and params:
-WORKLOADS_BASE="pjacobi pmg_cheb"
+WORKLOADS_BASE="pjacobi pmg_cheb phsgs bicgstab rjacobi"
 CONFS_BASE="NV1 NV2 NV8"
 SECTIONS_BASE="solver" 
 PARAMETERS_BASE="ALL"
 
-WORKLOADS_COMPETING="pjacobi pmg_cheb"
+WORKLOADS_COMPETING="pjacobi pmg_cheb phsgs bicgstab rjacobi"
 CONFS_COMPETING="NV1 NV2 NV8"
 SECTIONS_COMPETING="solver" 
 PARAMETERS_COMPETING="ALL"

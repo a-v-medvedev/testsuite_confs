@@ -1,0 +1,57 @@
+---
+common_params:
+    timeout:
+        default: 20
+    tolerance:
+        solver/iters:
+            default: 2
+        solver/abs_residual[0]:
+            default: 1.0e-4
+        solver/residual[0]:
+            default: 1.0e-4
+        solver/abs_residual[1]:
+            default: 1.0e-4
+        solver/residual[1]:
+            default: 1.0e-4
+        solver/abs_residual[7]:
+            default: 1.0e-4
+        solver/residual[7]:
+            default: 1.0e-4
+
+phsgs/NV1/@10x10x10:
+    values:
+        solver/iters: 6
+        solver/abs_residual[0]: 0.0000001488
+        solver/residual[0]: 0.0000001488
+
+phsgs/NV1/@5x5x5:
+    values:
+        solver/iters: 3
+        solver/abs_residual[0]: 0.0000000531
+        solver/residual[0]: 0.0000000531
+
+phsgs/NV2/@10x10x10:
+    values:
+        solver/iters: 7
+        solver/abs_residual[1]: 0.0000042451
+        solver/residual[1]: 0.0000042451
+
+phsgs/NV2/@5x5x5:
+    values:
+        solver/iters: 4
+        solver/abs_residual[1]: 0.0000000271
+        solver/residual[1]: 0.0000000271
+
+phsgs/NV8/@10x10x10:
+    values:
+        solver/iters: 7
+        solver/abs_residual[7]: 0.0000305647
+        solver/residual[7]: 0.0000305647
+
+phsgs/NV8/@5x5x5:
+    values:
+        solver/iters: 4
+        solver/abs_residual[7]: 0.0000001846
+        solver/residual[7]: 0.0000001846
+
+...
