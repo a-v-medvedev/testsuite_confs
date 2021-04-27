@@ -1,4 +1,23 @@
 ---
+common_params:
+    tolerance:
+        solver/abs_residual[0]:
+            default: 1.0e-6
+        solver/residual[0]:
+            default: 1.0e-6
+        solver/abs_residual[1]:
+            default: 1.0e-6
+        solver/residual[1]:
+            default: 1.0e-6
+        solver/abs_residual[3]:
+            default: 1.0e-6
+        solver/residual[3]:
+            default: 1.0e-6
+        solver/abs_residual[7]:
+            default: 1.0e-6
+        solver/residual[7]:
+            default: 1.0e-6
+
 pjacobi/NV1/@10x10x10:
     values:
         solver/iters: 8

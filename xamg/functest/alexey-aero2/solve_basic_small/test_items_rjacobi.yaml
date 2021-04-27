@@ -1,6 +1,18 @@
 ---
 common_params:
     tolerance:
+        solver/abs_residual[0]:
+            default: 1.0e-4
+        solver/residual[0]:
+            default: 1.0e-4
+        solver/abs_residual[1]:
+            default: 1.0e-4
+        solver/residual[1]:
+            default: 1.0e-4
+        solver/abs_residual[4]:
+            default: 1.0e-4
+        solver/residual[4]:
+            default: 1.0e-4
         solver/abs_residual[7]:
             default: 1.0e-4
         solver/residual[7]:

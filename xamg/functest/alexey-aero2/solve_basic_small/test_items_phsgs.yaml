@@ -3,8 +3,6 @@ common_params:
     timeout:
         default: 20
     tolerance:
-        solver/iters:
-            default: 2
         solver/abs_residual[0]:
             default: 1.0e-4
         solver/residual[0]:
