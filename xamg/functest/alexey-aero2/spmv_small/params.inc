@@ -22,7 +22,7 @@ export MASSIVE_TESTS_APPLICATION="xamg"
 
 
 # Number of sumultaineously queued:
-export MASSIVE_TESTS_NQUEUED=1
+export MASSIVE_TESTS_NQUEUED=4
 
 
 # Repeats in execution:
