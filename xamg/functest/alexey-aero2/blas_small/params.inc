@@ -39,7 +39,7 @@ export MASSIVE_TESTS_PPNS=1
 # Sizes:
 ##### export MASSIVE_TESTS_SIZES="@@100 @@200 @@1000 @@10000 @@1000000"
 export MASSIVE_TESTS_SIZES="@@100 @@1000 @@1000000"
-export MASSIVE_TESTS_REPEATS="20 10 5"
+export MASSIVE_TESTS_REPEATS="100 50 5"
 
 
 # Workloads, sections and params:
