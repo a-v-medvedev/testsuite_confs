@@ -22,8 +22,8 @@ eval $(parse_yaml $1)
 workload=$(echo ${info_config} | sed 's/.*input_//;s/.yaml//')
 
 if [ "${info_nprocs}" == "1" ]; then
-    ASTR=$(echo $solver_abs_residual | awk -F'[\\[\\], ]+' '{ for (i=1;i<NF+1;i++) if ($i != "") { V=$i; n++} } END { if (n) printf "solver/abs_residual[" n-1 "]: %.10f", V; }')
-    RSTR=$(echo $solver_residual | awk -F'[\\[\\], ]+' '{ for (i=1;i<NF+1;i++) if ($i != "") { V=$i; n++} } END { if (n) printf "solver/residual[" n-1 "]: %.10f", V; }')
+    ASTR=$(echo $solver_abs_residual | awk -F'[\\[\\], ]+' '{ for (i=1;i<NF+1;i++) if ($i != "") { V=$i; n++} } END { if (n) printf "solver/abs_residual[" n-1 "]: %.12e", V; }')
+    RSTR=$(echo $solver_rel_residual | awk -F'[\\[\\], ]+' '{ for (i=1;i<NF+1;i++) if ($i != "") { V=$i; n++} } END { if (n) printf "solver/rel_residual[" n-1 "]: %.12e", V; }')
     ISTR=$(echo "solver/iters: $solver_iters") 
     echo -ne "$workload/NV${info_NV}/${info_matrix}:\t"
     echo -ne "    values:\t"

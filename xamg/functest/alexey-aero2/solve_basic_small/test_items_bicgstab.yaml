@@ -2,37 +2,37 @@
 bicgstab/NV1/@10x10x10:
     values:
         solver/iters: 16
-        solver/abs_residual[0]: 0.0000001356
-        solver/rel_residual[0]: 0.0000001356
+        solver/abs_residual[0]: 1.355688899574e-07
+        solver/rel_residual[0]: 4.287064721262e-09
 
 bicgstab/NV1/@5x5x5:
     values:
         solver/iters: 9
-        solver/abs_residual[0]: 0.0000000005
-        solver/rel_residual[0]: 0.0000000005
+        solver/abs_residual[0]: 4.979107698176e-10
+        solver/rel_residual[0]: 4.453449312165e-11
 
 bicgstab/NV2/@10x10x10:
     values:
         solver/iters: 17
-        solver/abs_residual[1]: 0.0000134133
-        solver/rel_residual[1]: 0.0000134133
+        solver/abs_residual[1]: 1.341328500531e-05
+        solver/rel_residual[1]: 2.322285563946e-09
 
 bicgstab/NV2/@5x5x5:
     values:
         solver/iters: 9
-        solver/abs_residual[1]: 0.0000002885
-        solver/rel_residual[1]: 0.0000002885
+        solver/abs_residual[1]: 2.884945725551e-07
+        solver/rel_residual[1]: 3.550786474725e-10
 
 bicgstab/NV8/@10x10x10:
     values:
         solver/iters: 17
-        solver/abs_residual[7]: 0.0000937983
-        solver/rel_residual[7]: 0.0000937983
+        solver/abs_residual[7]: 9.379832691326e-05
+        solver/rel_residual[7]: 2.312858018268e-09
 
 bicgstab/NV8/@5x5x5:
     values:
         solver/iters: 9
-        solver/abs_residual[7]: 0.0000019958
-        solver/rel_residual[7]: 0.0000019958
+        solver/abs_residual[7]: 1.995773221581e-06
+        solver/rel_residual[7]: 3.475768910626e-10
 
 ...

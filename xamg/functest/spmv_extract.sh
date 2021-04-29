@@ -20,7 +20,7 @@ function parse_yaml {
 eval $(parse_yaml $1)
 
 if [ "${info_nprocs}" == "1" ]; then
-VSTR=$(echo $spmv_Y_norm | awk -F'[\\[\\], ]+' '{ for (i=1;i<NF+1;i++) if ($i != "") { V=$i; n++} } END { if (n) printf "spmv/Y_norm[" n-1 "]: %.10f", V; }')
+VSTR=$(echo $spmv_Y_norm | awk -F'[\\[\\], ]+' '{ for (i=1;i<NF+1;i++) if ($i != "") { V=$i; n++} } END { if (n) printf "spmv/Y_norm[" n-1 "]: %.12e", V; }')
 
 #if [ "axpby/NV1/@@1000000" == "${blas_operation}/NV${info_NV}/@@${info_size}" ]; then
 echo -ne "spmv/NV${info_NV}/${info_matrix}:\t"

@@ -20,7 +20,7 @@ function parse_yaml {
 eval $(parse_yaml $1)
 
 if [ "${info_nprocs}" == "1" ]; then
-VSTR=$(echo $blas_RES_csum | awk -F'[\\[\\], ]+' '{ for (i=1;i<NF+1;i++) if ($i != "") { V=$i; n++} } END { if (n) printf "blas/RES_csum[" n-1 "]: %.10f", V; }')
+VSTR=$(echo $blas_RES_csum | awk -F'[\\[\\], ]+' '{ for (i=1;i<NF+1;i++) if ($i != "") { V=$i; n++} } END { if (n) printf "blas/RES_csum[" n-1 "]: %.1f", V; }')
 
 #if [ "axpby/NV1/@@1000000" == "${blas_operation}/NV${info_NV}/@@${info_size}" ]; then
 echo -ne "${blas_operation}/NV${info_NV}/@@${info_size}:\t"
