@@ -5,7 +5,7 @@ function env_init_global {
     script=$(mktemp .XXXXXX.sh)
 cat > $script << 'EOM'
 
-export MAKE_PARALLEL_LEVEL=4
+export MAKE_PARALLEL_LEVEL=10
 
 export PSUBMIT_OPTS_NNODES=1
 export PSUBMIT_OPTS_PPN=1
