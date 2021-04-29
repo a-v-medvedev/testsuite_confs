@@ -1,0 +1,4 @@
+---
+solver_params:
+  method: MergedBiCGStab
+  max_iters: 200
