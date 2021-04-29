@@ -5,7 +5,7 @@ common_params:
             default: 1.0e-4
             4/1: 5.0e-4
             8/1: 5.0e-4
-        solver/residual[0]:
+        solver/rel_residual[0]:
             default: 1.0e-4
             4/1: 5.0e-4
             8/1: 5.0e-4
@@ -13,7 +13,7 @@ common_params:
             default: 1.0e-4
             4/1: 5.0e-4
             8/1: 5.0e-4
-        solver/residual[1]:
+        solver/rel_residual[1]:
             default: 1.0e-4
             4/1: 5.0e-4
             8/1: 5.0e-4
@@ -21,7 +21,7 @@ common_params:
             default: 1.0e-4
             4/1: 5.0e-4
             8/1: 5.0e-4
-        solver/residual[3]:
+        solver/rel_residual[3]:
             default: 1.0e-4            
             4/1: 5.0e-4
             8/1: 5.0e-4
@@ -29,7 +29,7 @@ common_params:
             default: 1.0e-4
             4/1: 5.0e-4
             8/1: 5.0e-4
-        solver/residual[7]:
+        solver/rel_residual[7]:
             default: 1.0e-4
             4/1: 5.0e-4
             8/1: 5.0e-4
@@ -38,36 +38,36 @@ pmg_cheb/NV1/@10x10x10:
     values:
         solver/iters: 5
         solver/abs_residual[0]: 0.0000000055
-        solver/residual[0]: 0.0000000055
+        solver/rel_residual[0]: 0.0000000055
 
 pmg_cheb/NV1/@5x5x5:
     values:
         solver/iters: 3
         solver/abs_residual[0]: 0.0000000422
-        solver/residual[0]: 0.0000000422
+        solver/rel_residual[0]: 0.0000000422
 
 pmg_cheb/NV2/@10x10x10:
     values:
         solver/iters: 5
         solver/abs_residual[1]: 0.0000115764
-        solver/residual[1]: 0.0000115764
+        solver/rel_residual[1]: 0.0000115764
 
 pmg_cheb/NV2/@5x5x5:
     values:
         solver/iters: 3
         solver/abs_residual[1]: 0.0000003768
-        solver/residual[1]: 0.0000003768
+        solver/rel_residual[1]: 0.0000003768
 
 pmg_cheb/NV8/@10x10x10:
     values:
         solver/iters: 5
         solver/abs_residual[7]: 0.0001065317
-        solver/residual[7]: 0.0001065317
+        solver/rel_residual[7]: 0.0001065317
 
 pmg_cheb/NV8/@5x5x5:
     values:
         solver/iters: 3
         solver/abs_residual[7]: 0.0000049903
-        solver/residual[7]: 0.0000049903
+        solver/rel_residual[7]: 0.0000049903
 
 ...

@@ -3,36 +3,36 @@ bicgstab/NV1/@10x10x10:
     values:
         solver/iters: 16
         solver/abs_residual[0]: 0.0000001356
-        solver/residual[0]: 0.0000001356
+        solver/rel_residual[0]: 0.0000001356
 
 bicgstab/NV1/@5x5x5:
     values:
         solver/iters: 9
         solver/abs_residual[0]: 0.0000000005
-        solver/residual[0]: 0.0000000005
+        solver/rel_residual[0]: 0.0000000005
 
 bicgstab/NV2/@10x10x10:
     values:
         solver/iters: 17
         solver/abs_residual[1]: 0.0000134133
-        solver/residual[1]: 0.0000134133
+        solver/rel_residual[1]: 0.0000134133
 
 bicgstab/NV2/@5x5x5:
     values:
         solver/iters: 9
         solver/abs_residual[1]: 0.0000002885
-        solver/residual[1]: 0.0000002885
+        solver/rel_residual[1]: 0.0000002885
 
 bicgstab/NV8/@10x10x10:
     values:
         solver/iters: 17
         solver/abs_residual[7]: 0.0000937983
-        solver/residual[7]: 0.0000937983
+        solver/rel_residual[7]: 0.0000937983
 
 bicgstab/NV8/@5x5x5:
     values:
         solver/iters: 9
         solver/abs_residual[7]: 0.0000019958
-        solver/residual[7]: 0.0000019958
+        solver/rel_residual[7]: 0.0000019958
 
 ...

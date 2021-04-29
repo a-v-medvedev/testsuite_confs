@@ -3,54 +3,54 @@ common_params:
     tolerance:
         solver/abs_residual[0]:
             default: 1.0e-4
-        solver/residual[0]:
+        solver/rel_residual[0]:
             default: 1.0e-4
         solver/abs_residual[1]:
             default: 1.0e-4
-        solver/residual[1]:
+        solver/rel_residual[1]:
             default: 1.0e-4
         solver/abs_residual[4]:
             default: 1.0e-4
-        solver/residual[4]:
+        solver/rel_residual[4]:
             default: 1.0e-4
         solver/abs_residual[7]:
             default: 1.0e-4
-        solver/residual[7]:
+        solver/rel_residual[7]:
             default: 1.0e-4
 
 rjacobi/NV1/@10x10x10:
     values:
         solver/iters: 8
         solver/abs_residual[0]: 0.0000000985
-        solver/residual[0]: 0.0000000985
+        solver/rel_residual[0]: 0.0000000985
 
 rjacobi/NV1/@5x5x5:
     values:
         solver/iters: 4
         solver/abs_residual[0]: 0.0000000307
-        solver/residual[0]: 0.0000000307
+        solver/rel_residual[0]: 0.0000000307
 
 rjacobi/NV2/@10x10x10:
     values:
         solver/iters: 9
         solver/abs_residual[1]: 0.0000021668
-        solver/residual[1]: 0.0000021668
+        solver/rel_residual[1]: 0.0000021668
 
 rjacobi/NV2/@5x5x5:
     values:
         solver/iters: 5
         solver/abs_residual[1]: 0.0000000309
-        solver/residual[1]: 0.0000000309
+        solver/rel_residual[1]: 0.0000000309
 
 rjacobi/NV8/@10x10x10:
     values:
         solver/iters: 9
         solver/abs_residual[7]: 0.0000148791
-        solver/residual[7]: 0.0000148791
+        solver/rel_residual[7]: 0.0000148791
 
 rjacobi/NV8/@5x5x5:
     values:
         solver/iters: 5
         solver/abs_residual[7]: 0.0000003217
-        solver/residual[7]: 0.0000003217
+        solver/rel_residual[7]: 0.0000003217
 ...
