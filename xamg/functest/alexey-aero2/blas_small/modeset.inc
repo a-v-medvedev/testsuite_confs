@@ -25,9 +25,6 @@ function set_specific_params() {
         fatal "MASSIVE_TESTS_DRIVER must be functest."
     fi
     case "$SUBMODE" in
-        base)
-            export MASSIVETEST_AUX_ARGS="-mode blas"
-            ;;
         blas)
             export MASSIVETEST_AUX_ARGS="-mode blas"
             ;;
@@ -36,26 +33,24 @@ function set_specific_params() {
     esac
 
     case "$MODE" in
-          base)
-              ;;
-              1:1)
-              export MASSIVETEST_AUX_ARGS="$MASSIVETEST_AUX_ARGS -node_config nnodes=1:ncores=1"
-              ;;
-              1:2)
-              export MASSIVETEST_AUX_ARGS="$MASSIVETEST_AUX_ARGS -node_config nnodes=1:ncores=2"
-              ;;
-              1:4)
-              export MASSIVETEST_AUX_ARGS="$MASSIVETEST_AUX_ARGS -node_config nnodes=1:ncores=4"
-              ;;
-              2:1)
-              export MASSIVETEST_AUX_ARGS="$MASSIVETEST_AUX_ARGS -node_config nnodes=2:ncores=1"
-              ;;
-              2:2)
-              export MASSIVETEST_AUX_ARGS="$MASSIVETEST_AUX_ARGS -node_config nnodes=2:ncores=2"
-              ;;
-              4:1)
-              export MASSIVETEST_AUX_ARGS="$MASSIVETEST_AUX_ARGS -node_config nnodes=4:ncores=1"
-              ;;
+          1:1)
+          export MASSIVETEST_AUX_ARGS="$MASSIVETEST_AUX_ARGS -node_config nnodes=1:ncores=1"
+          ;;
+          1:2)
+          export MASSIVETEST_AUX_ARGS="$MASSIVETEST_AUX_ARGS -node_config nnodes=1:ncores=2"
+          ;;
+          1:4)
+          export MASSIVETEST_AUX_ARGS="$MASSIVETEST_AUX_ARGS -node_config nnodes=1:ncores=4"
+          ;;
+          2:1)
+          export MASSIVETEST_AUX_ARGS="$MASSIVETEST_AUX_ARGS -node_config nnodes=2:ncores=1"
+          ;;
+          2:2)
+          export MASSIVETEST_AUX_ARGS="$MASSIVETEST_AUX_ARGS -node_config nnodes=2:ncores=2"
+          ;;
+          4:1)
+          export MASSIVETEST_AUX_ARGS="$MASSIVETEST_AUX_ARGS -node_config nnodes=4:ncores=1"
+          ;;
           *) fatal "Unknown mode: $MODE"
              ;;
     esac
