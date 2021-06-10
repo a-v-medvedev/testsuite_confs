@@ -1,0 +1,71 @@
+---
+common_params:
+  project_dir: run
+  output_dir: out
+  checkpoint_dir: chk
+  cgns_model: Tube_s1_10_tet.cgns
+
+numerical_method_params:
+  CFL_number: 1.0
+  Newton_solver_tolerance: 1.0e-6
+  Newton_solver_max_iterations: 100
+
+simulation_params:
+  final_time: 3.0
+  checkpoint_frequency: 500
+  log_frequency: 20
+  output_frequency: 100
+  use_combustion: false
+  use_dispersed_phases: false
+  use_restart: false
+  use_viscous_flow: true
+  use_turbulence_model: false
+
+boundary_conditions:
+  FirstTestCondition:
+    name: BC1_on_IN
+    type: Wall
+#    type: Inlet
+#    velocity: [100, 125, 250]
+#    density: 1.0
+#    pressure: 15.0
+#    temperature: 1200
+#    mass_fractions: [0.25, 0.25, 0.25, 0.25]
+  SecondTestCondition:
+    name: BC1_on_WALL
+    type: Wall
+  ThirdTestCondition:
+    name: BC1_on_OUT
+    type: Wall
+#    type: SubSonicOutlet
+
+components:
+  component0:
+    name: Air
+    props_file_name: yaml/component_properties/comp_air.yaml
+  
+initial_conditions:
+  block0:
+    xrange: [-1e6, 1e6]
+    yrange: [-1e6, 1e6]
+    zrange: [-1e6, 5.0]
+    velocity: [0, 0, 0]
+    density: 1.0
+    pressure: 1.0
+#    temperature: 0
+    mass_fractions: [1.0]
+  block1:
+    xrange: [-1e6, 1e6]
+    yrange: [-1e6, 1e6]
+    zrange: [5, 1e6]
+    velocity: [0, 0, 0]   # [m/s]
+    density: 0.125
+    pressure: 0.1
+#    temperature: 0
+    mass_fractions: [1.0]
+
+combustion:
+
+restart_params:
+  restart_file_name: dump_1.bin
+  reset_sources: false
