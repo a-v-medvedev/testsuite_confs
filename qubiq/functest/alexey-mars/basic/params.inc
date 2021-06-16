@@ -54,7 +54,7 @@ SUBMODES="X"
 
 # Output file structure:
 export MASSIVE_TESTS_KEYWORDS="Workload:Mode:X:X"
-export MASSIVE_TESTS_SIZEKEYWORD="Grid"
+export MASSIVE_TESTS_SIZEKEYWORD="Matrix"
 
 function get_value() {
     local line=$1

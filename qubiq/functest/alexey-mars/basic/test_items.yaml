@@ -1,5 +1,7 @@
 ---
-sod-1p/X/Tube_s1_10_tet.cgns:
+sod-1p/Tube_s1_10_tet.cgns:
+    options:
+        timeout: 50
     values:
         xxx/bar: 42
 ...
