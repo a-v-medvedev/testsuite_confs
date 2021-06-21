@@ -30,14 +30,14 @@ MASSIVE_TESTS_EXEC_REPEATS=3
 
 
 # Scope:
-export MASSIVE_TESTS_NODES="1 2 4 8"
+export MASSIVE_TESTS_NODES="1 2 3 4"
 export MASSIVE_TESTS_PPNS=1
 [ -z "$MASSIVE_TESTS_PPNS" ] && fatal "PSUBMIT_OPTS_PPN is not set."
 
 
 # Sizes:
 export MASSIVE_TESTS_SIZES="Tube_s1_10_tet.cgns"
-export MASSIVE_TESTS_REPEATS="3"
+export MASSIVE_TESTS_REPEATS="1"
 
 
 # Workloads, sections and params:
