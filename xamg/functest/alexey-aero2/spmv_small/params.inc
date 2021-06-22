@@ -36,7 +36,7 @@ export MASSIVE_TESTS_PPNS=1
 
 
 # Sizes:
-export MASSIVE_TESTS_SIZES="@10x10x10 @5x5x5"
+export MASSIVE_TESTS_WORKPARTS="@10x10x10 @5x5x5"
 export MASSIVE_TESTS_REPEATS="3"
 
 
@@ -53,7 +53,7 @@ SUBMODES="spmv"
 
 # Output file structure:
 export MASSIVE_TESTS_KEYWORDS="Workload:Mode:X:X"
-export MASSIVE_TESTS_SIZEKEYWORD="Matrix"
+export MASSIVE_TESTS_SIZEKEYWORD="Workpart"
 
 function get_value() {
     local line=$1

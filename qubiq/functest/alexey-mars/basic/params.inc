@@ -36,7 +36,7 @@ export MASSIVE_TESTS_PPNS=1
 
 
 # Sizes:
-export MASSIVE_TESTS_SIZES="Tube_s1_10_tet.cgns"
+export MASSIVE_TESTS_WORKPARTS="Tube_s1_10_tet.cgns"
 export MASSIVE_TESTS_REPEATS="1"
 
 
@@ -54,7 +54,7 @@ SUBMODES="X"
 
 # Output file structure:
 export MASSIVE_TESTS_KEYWORDS="Workload:Mode:X:X"
-export MASSIVE_TESTS_SIZEKEYWORD="Matrix"
+export MASSIVE_TESTS_SIZEKEYWORD="Workpart"
 
 function get_value() {
     local line=$1

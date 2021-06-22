@@ -36,7 +36,7 @@ export MASSIVE_TESTS_PPNS=1  # $PSUBMIT_OPTS_PPN
 
 # Sizes:
 ##### export MASSIVE_TESTS_SIZES="@@100 @@200 @@1000 @@10000 @@1000000"
-export MASSIVE_TESTS_SIZES="@@100 @@1000 @@1000000"
+export MASSIVE_TESTS_WORKPARTS="@@100 @@1000 @@1000000"
 export MASSIVE_TESTS_REPEATS="100 50 5"
 
 
@@ -54,7 +54,7 @@ SUBMODES="blas"
 
 # Output file structure:
 export MASSIVE_TESTS_KEYWORDS="Workload:Mode:X:X"
-export MASSIVE_TESTS_SIZEKEYWORD="Matrix"
+export MASSIVE_TESTS_SIZEKEYWORD="Workpart"
 
 function get_value() {
     local line=$1
