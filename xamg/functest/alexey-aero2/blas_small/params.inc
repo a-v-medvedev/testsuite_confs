@@ -52,10 +52,6 @@ MODES="1:1 1:2 2:1 4:1 1:4 2:2"
 SUBMODES="blas"
 
 
-# Output file structure:
-export MASSIVE_TESTS_KEYWORDS="Workload:Mode:X:X"
-export MASSIVE_TESTS_SIZEKEYWORD="Workpart"
-
 function get_value() {
     local line=$1
     echo "$line" | awk -F '[ :{},]*' '{ for (v=1; v<=NF; v++) { if (flag==1) {flag=0; print $v} if ($v=="Value") flag=1; } }'

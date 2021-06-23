@@ -51,11 +51,6 @@ PARAMETERS="ALL"
 MODES="X"
 SUBMODES="X"
 
-
-# Output file structure:
-export MASSIVE_TESTS_KEYWORDS="Workload:Mode:X:X"
-export MASSIVE_TESTS_SIZEKEYWORD="Workpart"
-
 function get_value() {
     local line=$1
     echo "$line" | awk -F '[ :{},]*' '{ for (v=1; v<=NF; v++) { if (flag==1) {flag=0; print $v} if ($v=="Value") flag=1; } }'
