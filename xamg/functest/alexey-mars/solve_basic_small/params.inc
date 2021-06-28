@@ -26,11 +26,13 @@ export MASSIVE_TESTS_NQUEUED=4
 
 
 # Repeats in execution:
-MASSIVE_TESTS_EXEC_REPEATS=3
+#MASSIVE_TESTS_EXEC_REPEATS=3
+MASSIVE_TESTS_EXEC_REPEATS=1
 
 
 # Scope:
-export MASSIVE_TESTS_NODES="1 2 4 8"
+#export MASSIVE_TESTS_NODES="1 2 4 8"
+export MASSIVE_TESTS_NODES="4 8"
 export MASSIVE_TESTS_PPNS=1   #$PSUBMIT_OPTS_PPN
 [ -z "$MASSIVE_TESTS_PPNS" ] && fatal "PSUBMIT_OPTS_PPN is not set."
 
@@ -42,13 +44,15 @@ export MASSIVE_TESTS_REPEATS="3"
 
 # Workloads, sections and params:
 WORKLOADS="pjacobi pmg_cheb phsgs bicgstab rjacobi"
-CONFS="NV1 NV2 NV8"
+#CONFS="NV1 NV2 NV8"
+CONFS="NV1"
 SECTIONS="solver" 
 PARAMETERS="ALL"
 
 
 # Modes and submodes:
-MODES="1:1 2:2 1:4"
+#MODES="1:1 2:2 1:4"
+MODES="1:1"
 SUBMODES="solve"
 
 
