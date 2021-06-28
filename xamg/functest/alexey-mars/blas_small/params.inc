@@ -26,42 +26,31 @@ export MASSIVE_TESTS_NQUEUED=4
 
 
 # Repeats in execution:
-MASSIVE_TESTS_EXEC_REPEATS_BASE=1
-MASSIVE_TESTS_EXEC_REPEATS_COMPETING=3
-
+MASSIVE_TESTS_EXEC_REPEATS=3
 
 # Scope:
 export MASSIVE_TESTS_NODES="1 2 4 8"
-export MASSIVE_TESTS_PPNS=1
+export MASSIVE_TESTS_PPNS=1  # $PSUBMIT_OPTS_PPN
 [ -z "$MASSIVE_TESTS_PPNS" ] && fatal "PSUBMIT_OPTS_PPN is not set."
 
 
 # Sizes:
 ##### export MASSIVE_TESTS_SIZES="@@100 @@200 @@1000 @@10000 @@1000000"
-export MASSIVE_TESTS_SIZES="@@100 @@1000 @@1000000"
+export MASSIVE_TESTS_WORKPARTS="@@100 @@1000 @@1000000"
 export MASSIVE_TESTS_REPEATS="100 50 5"
 
 
 # Workloads, sections and params:
-WORKLOADS_BASE="axpby axpbypcz"
-CONFS_BASE="NV1 NV2 NV4 NV8"
-SECTIONS_BASE="blas" 
-PARAMETERS_BASE="ALL"
-
-WORKLOADS_COMPETING="axpby axpbypcz"
-CONFS_COMPETING="NV1 NV2 NV4 NV8"
-SECTIONS_COMPETING="blas" 
-PARAMETERS_COMPETING="ALL"
+WORKLOADS="axpby axpbypcz"
+CONFS="NV1 NV2 NV4 NV8"
+SECTIONS="blas" 
+PARAMETERS="ALL"
 
 
 # Modes and submodes:
 MODES="1:1 1:2 2:1 4:1 1:4 2:2"
 SUBMODES="blas"
 
-
-# Output file structure:
-export MASSIVE_TESTS_KEYWORDS="Workload:Mode:X:X"
-export MASSIVE_TESTS_SIZEKEYWORD="Matrix"
 
 function get_value() {
     local line=$1
