@@ -43,16 +43,17 @@ export MASSIVE_TESTS_REPEATS="3"
 
 
 # Workloads, sections and params:
-WORKLOADS="pjacobi pmg_cheb phsgs bicgstab rjacobi"
-#CONFS="NV1 NV2 NV8"
-CONFS="NV1"
+#WORKLOADS="pjacobi pmg_cheb phsgs bicgstab rjacobi"
+WORKLOADS="phsgs"
+CONFS="NV1 NV2 NV8"
+#CONFS="NV1"
 SECTIONS="solver" 
 PARAMETERS="ALL"
 
 
 # Modes and submodes:
-#MODES="1:1 2:2 1:4"
-MODES="1:1"
+MODES="1:1 2:2 1:4"
+#MODES="1:1"
 SUBMODES="solve"
 
 
