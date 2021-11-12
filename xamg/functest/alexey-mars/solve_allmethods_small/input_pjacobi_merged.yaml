@@ -1,6 +1,0 @@
----
-solver_params:
-  method: MergedPBiCGStab
-  max_iters: 100
-preconditioner_params:
-  method: Jacobi
