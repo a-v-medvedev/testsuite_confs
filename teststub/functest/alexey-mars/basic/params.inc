@@ -26,9 +26,7 @@ export MASSIVE_TESTS_NQUEUED=1
 
 
 # Repeats in execution:
-MASSIVE_TESTS_EXEC_REPEATS_BASE=1
-MASSIVE_TESTS_EXEC_REPEATS_COMPETING=3
-
+MASSIVE_TESTS_EXEC_REPEATS=3
 
 # Scope:
 export MASSIVE_TESTS_NODES="2 4"
@@ -37,30 +35,20 @@ export MASSIVE_TESTS_PPNS=1
 
 
 # Sizes:
-export MASSIVE_TESTS_SIZES="@10x10x10"
-export MASSIVE_TESTS_REPEATS="3"
+export MASSIVE_TESTS_WORKPARTS="xxx yyy"
+export MASSIVE_TESTS_REPEATS="3 5"
 
 
 # Workloads, sections and params:
-WORKLOADS_BASE="xxx yyy"
-CONFS_BASE="X"
-SECTIONS_BASE="sec1" 
-PARAMETERS_BASE="p1"
-
-WORKLOADS_COMPETING="xxx yyy"
-CONFS_COMPETING="X"
-SECTIONS_COMPETING="sec1" 
-PARAMETERS_COMPETING="p1"
+WORKLOADS="xxx yyy"
+CONFS="X"
+SECTIONS="sec1" 
+PARAMETERS="p1"
 
 
 # Modes and submodes:
 MODES="T A C E"
 SUBMODES="always never"
-
-
-# Output file structure:
-export MASSIVE_TESTS_KEYWORDS="Workload:X:X:X"
-export MASSIVE_TESTS_SIZEKEYWORD="Matrix"
 
 function get_value() {
     local line=$1
