@@ -35,8 +35,8 @@ export MASSIVE_TESTS_PPNS=1
 
 
 # Sizes:
-export MASSIVE_TESTS_WORKPARTS="xxx yyy"
-export MASSIVE_TESTS_REPEATS="3 5"
+export MASSIVE_TESTS_WORKPARTS="@10x10x10"
+export MASSIVE_TESTS_REPEATS="3"
 
 
 # Workloads, sections and params:
@@ -48,7 +48,7 @@ PARAMETERS="p1"
 
 # Modes and submodes:
 MODES="T A C E"
-SUBMODES="always never"
+SUBMODES="always rand50 never"
 
 function get_value() {
     local line=$1

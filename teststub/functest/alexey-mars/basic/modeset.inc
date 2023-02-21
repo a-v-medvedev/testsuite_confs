@@ -34,6 +34,10 @@ function set_specific_params() {
             export MASSIVETEST_AUX_ARGS="-mode never"
             ;;
 
+        rand50)
+            export MASSIVETEST_AUX_ARGS="-mode rand50"
+            ;;
+
         *) fatal "Unknown submode: $SUBMODE"
             ;;
     esac
