@@ -19,22 +19,29 @@ for i in $*; do
     parse_arg $i
 done
 
-[ -z "$WLD" ] && fatal "input_maker_cmdline.sh logic error: workload parameter is empty or not set"
+# This script generates a commant line for a test to run. The command line meant to be the only line
+# which this script outputs to stdout.
+#
+# After parsing the assignments given in the command line, we have the variables:
+#
+# $WLD $CONF $WPRT $WPRT_PARAMS $NP $PPN $TIMEOUT $TESTITEM__xxx_yyy
+#
+# { $WLD, $CONF } -- workload name and configuration name
+# { $WPRT, $WPRT_PARAMS } -- workpart name and its numeric parameter (typically, numer of iterations)
+# { $NP, $PPN } -- number of nodes and number of processes per node for this MPI session
+# $TIMEOUT -- numeric timeout parameter in seconds
+#
+# $TESTITEM__xxx_yyy  -- records from test_items.yaml that correspond to this test item
+#
+# Script return value: non-zero return value means that this test will be skipped, message will be
+# copied to massivetest log
+#
 
-# WLD CONF WPRT WPRT_PARAMS NP PPN TIMEOUT
-#
-# { WLD, CONF } -- worload name and configuration name
-# { WPRT, WPRT_PARAMS } -- workpart name and its numeric parameter (typically, numer of iterations)
-# { NP, PPN } -- number of nodes and number of processes per node for this MPI session
-# TIMEOUT -- numeric timeout parametee in seconds
-#
-# TESTITEM__xxx_yyy  -- records from test_items,yaml that correspond to this test item
-#
-# Return value: non-zero return value means that this test will be skipped, message will be copied to massivetest log
-#
+[ -z "$WLD" ] && fatal "input_maker_cmdline.sh logic error: workload parameter is empty or not set"
+[ -z "$WPRT" ] && fatal "input_maker_cmdline.sh logic error: workpart parameter is empty or not set"
 
 if [ "$MASSIVETEST_AUX_ARGS" == "-mode always -code T"  ]; then
-    echo "I'm too lazy for this ($*)" >&2
+    echo "I'm too lazy for this, let us skip this test" >&2
     exit 1
 fi
 echo "-load input_$WLD.yaml -output result.%PSUBMIT_JOBID%.yaml -timeout $TIMEOUT $MASSIVETEST_AUX_ARGS"
