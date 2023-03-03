@@ -20,10 +20,8 @@
 export MASSIVE_TESTS_DRIVER="functest"
 export MASSIVE_TESTS_APPLICATION="teststub"
 
-
 # Number of sumultaineously queued:
 export MASSIVE_TESTS_NQUEUED=1
-
 
 # Repeats in execution:
 MASSIVE_TESTS_EXEC_REPEATS=3
@@ -31,20 +29,16 @@ MASSIVE_TESTS_EXEC_REPEATS=3
 # Scope:
 export MASSIVE_TESTS_NODES="2 4"
 export MASSIVE_TESTS_PPNS=1
-[ -z "$MASSIVE_TESTS_PPNS" ] && fatal "PSUBMIT_OPTS_PPN is not set."
-
 
 # Sizes:
 export MASSIVE_TESTS_WORKPARTS="@10x10x10"
 export MASSIVE_TESTS_REPEATS="3"
-
 
 # Workloads, sections and params:
 WORKLOADS="xxx yyy"
 CONFS="X"
 SECTIONS="sec1" 
 PARAMETERS="p1"
-
 
 # Modes and submodes:
 MODES="T A C E"
