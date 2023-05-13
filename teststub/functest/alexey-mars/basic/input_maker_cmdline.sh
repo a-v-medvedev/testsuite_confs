@@ -44,7 +44,11 @@ if [ "$MASSIVETEST_AUX_ARGS" == "-mode always -code T"  ]; then
     echo "I'm too lazy for this, let us skip this test" >&2
     exit 1
 fi
-echo "-load input_$WLD.yaml -output result.%PSUBMIT_JOBID%.yaml -timeout $TIMEOUT $MASSIVETEST_AUX_ARGS"
+if [ "$WPRT" == "generating" ]; then
+#    GENERATE="-generate generated.%PSUBMIT_JOBID%.txt"
+    GENERATE="-generate generated_%PSUBMIT_NP%.txt"
+fi    
+echo "-load input_$WLD.yaml -output result.%PSUBMIT_JOBID%.yaml -timeout $TIMEOUT $MASSIVETEST_AUX_ARGS $GENERATE"
 exit 0
 
 
