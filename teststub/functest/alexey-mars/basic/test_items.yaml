@@ -21,6 +21,7 @@ xxx/generating:
     options:
         skip: false
         timeout: 5
+        postproc: ./postproc.sh
     values:
         sec1/p1: 10.1010101
         sec1/p2: 10.2020202
@@ -30,6 +31,7 @@ yyy/generating:
     options:
         skip: false
         timeout: 5
+        postproc: ./postproc.sh
     values:
         sec1/p1: 100.1010101
         sec1/p2: 100.2020202
@@ -39,8 +41,9 @@ xxx/waiting:
     options:
         skip: false
         timeout: 5
+        preproc: ./preproc.sh
     prerequisites: 
-        generated_%NP%.txt: file
+        generated__%WLD%__%NP%.txt: file
     values:
         sec1/p1: 10.1010101
         sec1/p2: 10.2020202
@@ -50,8 +53,9 @@ yyy/waiting:
     options:
         skip: false
         timeout: 5
+        preproc: ./preproc.sh
     prerequisites: 
-        generated_%NP%.txt: file
+        generated__%WLD%__%NP%.txt: file
     values:
         sec1/p1: 100.1010101
         sec1/p2: 100.2020202

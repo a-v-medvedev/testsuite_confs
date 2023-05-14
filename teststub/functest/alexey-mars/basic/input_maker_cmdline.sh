@@ -46,7 +46,7 @@ if [ "$MASSIVETEST_AUX_ARGS" == "-mode always -code T"  ]; then
 fi
 if [ "$WPRT" == "generating" ]; then
 #    GENERATE="-generate generated.%PSUBMIT_JOBID%.txt"
-    GENERATE="-generate generated_%PSUBMIT_NP%.txt"
+    GENERATE="-generate generated.%PSUBMIT_JOBID%.txt"
 fi    
 echo "-load input_$WLD.yaml -output result.%PSUBMIT_JOBID%.yaml -timeout $TIMEOUT $MASSIVETEST_AUX_ARGS $GENERATE"
 exit 0
