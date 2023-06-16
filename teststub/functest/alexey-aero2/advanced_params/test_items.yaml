@@ -1,0 +1,46 @@
+---
+common_params:
+    skip: true
+    timeout: 1
+    tolerance_int: 1
+    tolerance_float: 1.0e-8
+    tolerance_float_kind: relative
+    per-pconf:
+        skip:
+            1/1: false
+            2/1: false
+            4/1: false
+        timeout:
+            1/1: 2
+        tolerance_int:
+            1/1: 2
+        tolerance_float:
+            1/1: 1.0e-16
+
+xxx/simple:
+    options:
+        skip: false
+        timeout: 5
+        tolerance_float_kind: absolute
+        tolerance_float: 0.0000001
+        per-pconf:
+            skip:
+                2/1: true
+    values:
+        sec1/p1: [ relative, 10.1010101, 1% ]
+        sec1/p2: 10.5
+        sec2/r1: 11.010101
+
+yyy/simple:
+    options:
+        skip: false
+        timeout: 5
+        tolerance_float: 1.0e-12
+        per-pconf:
+            timeout:
+                1/1: 18
+    values:
+        sec1/p1: [ absolute, 100.1010101, 0.000001 ]
+        sec1/p2: 100.2020202
+        sec2/r1: 101.010101
+...
