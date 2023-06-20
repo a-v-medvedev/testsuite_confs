@@ -37,8 +37,8 @@ export MASSIVE_TESTS_REPEATS="3"
 # Workloads, sections and params:
 WORKLOADS="xxx yyy"
 CONFS="X"
-SECTIONS="sec1" 
-PARAMETERS="p1"
+SECTIONS="sec1 sec2" 
+PARAMETERS="ALL"
 
 # Modes and submodes:
 MODES="T A C E"
@@ -78,7 +78,7 @@ function get_value() {
         local aux=$(echo $line | sed 's/^.*Auxvalues: /- /;s/}$//')
         eval $(parse_yaml "$aux" "aux")
     fi
-    if [ -z "$aux1_p1" ]; then
+    if [ -z "$aux1_p1" -o "$local1_Value" != "P" ]; then
         echo "$local1_Value" 
     else
         printf "%.4g\n" "$aux1_p1"
