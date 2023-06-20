@@ -40,7 +40,7 @@ yyy/simple:
             timeout:
                 1/1: 18
     values:
-        sec1/p1: [ absolute, 100.1010101, 0.000001 ]
+        sec1/p1: [ auxvalue, float, median, p1 ]
         sec1/p2: 100.2020202
         sec2/r1: 101.010101
 ...
