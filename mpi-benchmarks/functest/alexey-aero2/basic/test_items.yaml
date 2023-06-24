@@ -1,0 +1,18 @@
+---
+pt2pt/sync:
+    options:
+        postproc: "./getcalctime.sh output.%PSUBMIT_JOBID%.yaml"
+    values:
+        sync_pt2pt/tavg/4: [ auxvalue, float, median, sync_4 ]
+        sync_pt2pt/tavg/512: [ auxvalue, float, median, sync_512 ]
+
+pt2pt/async:
+    prerequisites: 
+        calctime_%WLD%_%NP%.txt: file
+    values:
+        async_pt2pt/tavg/4: [ auxvalue, float, median, async_4 ]
+        async_pt2pt/tavg/512: [ auxvalue, float, median, async_512 ]
+        async_pt2pt/over_full/4: [ auxvalue, float, median, over_4 ]
+        async_pt2pt/over_full/512: [ auxvalue, float, median, over_512 ]
+...
+           
