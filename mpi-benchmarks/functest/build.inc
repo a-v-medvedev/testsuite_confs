@@ -16,8 +16,13 @@ function dnb_mpi-benchmarks() {
         cd $old_pwd 
         cd $INSTALL_DIR
     fi
-    b_make "$pkg" "$V" "" "TARGET=ASYNC" "$m"
+    b_make "$pkg" "$V" "" "TARGET=ASYNC CXX=mpicxx" "$m"
+    if this_mode_is_set "i" "$m"; then
+        mkdir -p "$pkg"-"$V"
+        cp "$pkg"-"$V".src/IMB-ASYNC "$pkg"-"$V"
+    fi
     i_make_binary_symlink "$pkg" "${V}" "$m"
 }
 
-
+export TESTSUITE_PACKAGES="mpi-benchmarks"
+export TESTSUITE_VERSIONS="mpi-benchmarks:HEAD^topology_rework"

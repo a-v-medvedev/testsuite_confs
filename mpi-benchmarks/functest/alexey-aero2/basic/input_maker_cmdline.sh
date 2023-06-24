@@ -39,17 +39,20 @@ done
 
 [ -z "$WLD" ] && fatal "input_maker_cmdline.sh logic error: workload parameter is empty or not set"
 [ -z "$WPRT" ] && fatal "input_maker_cmdline.sh logic error: workpart parameter is empty or not set"
+[ -z "$IMBASYNC_CPER10USEC" ] && fatal "\$IMBASYNC_CPER10USEC shell variable is required to defile a dummy loop calibration constant."
 
-if [ "$WRPT" == "sync" ]; then
-    echo "-len $WPRT -ncycles $WPRT_PARAMS -output result.%PSUBMIT_JOBID%.yaml"
-elif [ "$WRPT" == "async" ]; then
+LEN="4,512,16384,131072,4194304"
+NCYCLES="10000,1000,50,10,5"
+IMBASYNC_BASIC="-datatype char -len $LEN -ncycles $NCYCLES -output result.%PSUBMIT_JOBID%.yaml"
+if [ "$WPRT" == "sync" ]; then
+    echo "$IMBASYNC_BASIC" sync_$WLD
+elif [ "$WPRT" == "async" ]; then
     IMBASYNC_WORKLOAD_PARAMS="cpu_calculations=true:gpu_calculations=false:cycles_per_10usec=$IMBASYNC_CPER10USEC"
-    IMBASYNC_WORKLOAD_PARAMS="$WORKLOAD_PARAMS:manual_progress=true"
-    LEN="4,512,16384,131072,4194304"
-    NCYCLES="10000,1000,50,10,5"
+    IMBASYNC_WORKLOAD_PARAMS="$IMBASYNC_WORKLOAD_PARAMS:manual_progress=true"
     [ ! -f calctime_${WLD}_${NP}.txt ] && fatal "No file calctime_${WLD}_${NP}.txt"
     [ $(wc -l < calctime_${WLD}_${NP}.txt) != "1" ] && fatal "Wrong format of file calctime_${WLD}_${NP}.txt"
-    echo "-datatype char -len $LEN -ncycles $NCYCLES -output result.%PSUBMIT_JOBID%.yaml -workload_params $IMBASYNC_WORKLOAD_PARAMS -calctime $(cat calctime_${WLD}_${NP}.txt) "
+    [ $(wc -c < calctime_${WLD}_${NP}.txt) -lt "2" ] && fatal "Wrong format of file calctime_${WLD}_${NP}.txt"
+    echo "$IMBASYNC_BASIC -workload_params $IMBASYNC_WORKLOAD_PARAMS -calctime $(cat calctime_${WLD}_${NP}.txt)" async_$WLD
 fi
 exit 0
 

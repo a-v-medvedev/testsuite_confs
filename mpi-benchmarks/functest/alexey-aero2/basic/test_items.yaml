@@ -1,7 +1,7 @@
 ---
 pt2pt/sync:
     options:
-        postproc: "./getcalctime.sh output.%PSUBMIT_JOBID%.yaml"
+        postproc: ./getcalctime.sh
     values:
         sync_pt2pt/tavg/4: [ auxvalue, float, median, sync_4 ]
         sync_pt2pt/tavg/512: [ auxvalue, float, median, sync_512 ]
