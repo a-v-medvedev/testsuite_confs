@@ -17,7 +17,7 @@ pt2pt/async:
         async_pt2pt/tavg/512: [ auxvalue, float, median, async_512 ]
         async_pt2pt/tavg/16384: [ auxvalue, float, median, async_16384 ]
         async_pt2pt/tavg/131072: [ auxvalue, float, median, async_131072 ]
-        async_pt2pt/tavg/512: [ auxvalue, float, median, async_512 ]
+        async_pt2pt/tavg/4194304: [ auxvalue, float, median, async_512 ]
         async_pt2pt/over_full/4: [ auxvalue, float, median, over_4 ]
         async_pt2pt/over_full/512: [ auxvalue, float, median, over_512 ]
         async_pt2pt/over_full/16384: [ auxvalue, float, median, over_16384 ]

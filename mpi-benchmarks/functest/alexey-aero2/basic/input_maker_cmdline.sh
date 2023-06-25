@@ -43,12 +43,25 @@ done
 
 LEN="4,512,16384,131072,4194304"
 NCYCLES="10000,1000,50,10,5"
-IMBASYNC_BASIC="-datatype char -len $LEN -ncycles $NCYCLES -output result.%PSUBMIT_JOBID%.yaml"
+NWARMUP="100,100,5,3,3"
+IMBASYNC_BASIC="-datatype char -len $LEN -ncycles $NCYCLES -nwarmup $NWARMUP -output result.%PSUBMIT_JOBID%.yaml"
 if [ "$WPRT" == "sync" ]; then
-    echo "$IMBASYNC_BASIC" sync_$WLD
+    #if [ "$MASSIVE_TESTS_TESTITEM_MODE" == "NOPROG" ]; then
+    if true; then
+        echo "$IMBASYNC_BASIC" sync_$WLD
+    else
+        fatal "we skip sync tests for any MODE besides NOPROG."
+    fi
 elif [ "$WPRT" == "async" ]; then
     IMBASYNC_WORKLOAD_PARAMS="cpu_calculations=true:gpu_calculations=false:cycles_per_10usec=$IMBASYNC_CPER10USEC"
-    IMBASYNC_WORKLOAD_PARAMS="$IMBASYNC_WORKLOAD_PARAMS:manual_progress=true:spin_period=10"
+    case "$MASSIVE_TESTS_TESTITEM_MODE" in
+        NOPROG) ;;
+        MANUAL5) IMBASYNC_WORKLOAD_PARAMS="$IMBASYNC_WORKLOAD_PARAMS:manual_progress=true:spin_period=5";;
+        MANUAL10) IMBASYNC_WORKLOAD_PARAMS="$IMBASYNC_WORKLOAD_PARAMS:manual_progress=true:spin_period=10";;
+        MANUAL20) IMBASYNC_WORKLOAD_PARAMS="$IMBASYNC_WORKLOAD_PARAMS:manual_progress=true:spin_period=20";;
+        MANUAL50) IMBASYNC_WORKLOAD_PARAMS="$IMBASYNC_WORKLOAD_PARAMS:manual_progress=true:spin_period=50";;
+        *) fatal "input_maker_cmdline.sh logic error: unknown MODE: $MASSIVE_TESTS_MODE";;
+    esac
     [ ! -f calctime_${WLD}_${NP}.txt ] && fatal "No file calctime_${WLD}_${NP}.txt"
     [ $(wc -l < calctime_${WLD}_${NP}.txt) != "1" ] && fatal "Wrong format of file calctime_${WLD}_${NP}.txt"
     [ $(wc -c < calctime_${WLD}_${NP}.txt) -lt "2" ] && fatal "Wrong format of file calctime_${WLD}_${NP}.txt"
