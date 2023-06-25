@@ -1,0 +1,27 @@
+---
+pt2pt/sync:
+    options:
+        postproc: ./getcalctime.sh
+    values:
+        sync_pt2pt/tavg/4: [ auxvalue, float, median, sync_4 ]
+        sync_pt2pt/tavg/512: [ auxvalue, float, median, sync_512 ]
+        sync_pt2pt/tavg/16384: [ auxvalue, float, median, sync_16384 ]
+        sync_pt2pt/tavg/131072: [ auxvalue, float, median, sync_131072 ]
+        sync_pt2pt/tavg/4194304: [ auxvalue, float, median, sync_4194304 ]
+
+pt2pt/async:
+    prerequisites: 
+        calctime_%WLD%_%NP%.txt: file
+    values:
+        async_pt2pt/tavg/4: [ auxvalue, float, median, async_4 ]
+        async_pt2pt/tavg/512: [ auxvalue, float, median, async_512 ]
+        async_pt2pt/tavg/16384: [ auxvalue, float, median, async_16384 ]
+        async_pt2pt/tavg/131072: [ auxvalue, float, median, async_131072 ]
+        async_pt2pt/tavg/4194304: [ auxvalue, float, median, async_512 ]
+        async_pt2pt/over_full/4: [ auxvalue, float, median, over_4 ]
+        async_pt2pt/over_full/512: [ auxvalue, float, median, over_512 ]
+        async_pt2pt/over_full/16384: [ auxvalue, float, median, over_16384 ]
+        async_pt2pt/over_full/131072: [ auxvalue, float, median, over_131072 ]
+        async_pt2pt/over_full/4194304: [ auxvalue, float, median, over_4194304 ]
+...
+           
