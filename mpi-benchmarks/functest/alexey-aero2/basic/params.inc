@@ -5,10 +5,10 @@ export MASSIVE_TESTS_APPLICATION="teststub"
 export MASSIVE_TESTS_NQUEUED=4
 
 # Repeats in execution:
-MASSIVE_TESTS_EXEC_REPEATS=3
+MASSIVE_TESTS_EXEC_REPEATS=10
 
 # Scope:
-export MASSIVE_TESTS_NODES="2 4"
+export MASSIVE_TESTS_NODES="2 4 6"
 export MASSIVE_TESTS_PPNS=1
 
 # Sizes:
@@ -39,10 +39,10 @@ function get_value_extended() {
         return 
     fi
     get_value_aux "$L"
-    if [ ! -z $aux1_sync_4 ]; then sync=$aux1_sync_4; fi
+    if [ ! -z $aux1_async_16384 ]; then async=$aux1_async_16384; fi
+    if [ ! -z $aux1_over_16384 ]; then over=$aux1_over_16384; fi
     L=$(get_line_from_output_yaml $file $keywords $key_block $wrptkeyword sync $n)    
     get_value_aux "$L"
-    if [ ! -z $aux1_async_4 ]; then async=$aux1_async_4; fi
-    if [ ! -z $aux1_over_full_4 ]; then over_full=$aux1_over_full_4; fi
-    echo "$over_full" "$sync" | awk '{ printf("%d%%", int(100.0 * float($1) / float($2) + 0.5); }' 2>/dev/null || echo "??" && true
+    if [ ! -z $aux1_sync_16384 ]; then sync=$aux1_sync_16384; fi
+    echo "$over" "$sync" | awk '{ printf("%d", int(100.0 - 100.0 * $1 / $2 + 0.5)); }' 2>/dev/null || echo "??" && true
 }

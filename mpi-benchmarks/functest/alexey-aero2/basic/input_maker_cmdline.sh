@@ -48,7 +48,7 @@ if [ "$WPRT" == "sync" ]; then
     echo "$IMBASYNC_BASIC" sync_$WLD
 elif [ "$WPRT" == "async" ]; then
     IMBASYNC_WORKLOAD_PARAMS="cpu_calculations=true:gpu_calculations=false:cycles_per_10usec=$IMBASYNC_CPER10USEC"
-    IMBASYNC_WORKLOAD_PARAMS="$IMBASYNC_WORKLOAD_PARAMS:manual_progress=true"
+    IMBASYNC_WORKLOAD_PARAMS="$IMBASYNC_WORKLOAD_PARAMS:manual_progress=true:spin_period=10"
     [ ! -f calctime_${WLD}_${NP}.txt ] && fatal "No file calctime_${WLD}_${NP}.txt"
     [ $(wc -l < calctime_${WLD}_${NP}.txt) != "1" ] && fatal "Wrong format of file calctime_${WLD}_${NP}.txt"
     [ $(wc -c < calctime_${WLD}_${NP}.txt) -lt "2" ] && fatal "Wrong format of file calctime_${WLD}_${NP}.txt"
