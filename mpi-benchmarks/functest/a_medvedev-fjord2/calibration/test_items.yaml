@@ -1,0 +1,9 @@
+---
+calibration/calibration:
+    values:
+        calc_calibration/calibration/avg: [ auxvalue, float, median, avg ]
+        calc_calibration/calibration/min: [ auxvalue, float, median, min ]
+        calc_calibration/calibration/max: [ auxvalue, float, median, max ]
+        calc_calibration/calibration/irregularity: [ auxvalue, float, median, irregularity ]
+...
+           

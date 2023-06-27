@@ -3,8 +3,7 @@
 default_url="https://github.com/a-v-medvedev/testsuite_confs.git"
 default_branch="master"
 default_conf="generic"
-default_suites="basic"
-
+default_suites="calibration pt2pt-patterns" # collective-patterns
 
 app="mpi-benchmarks"
 testdriver="functest"
