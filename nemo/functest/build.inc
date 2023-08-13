@@ -6,9 +6,10 @@ function dnb_nemo-build() {
     local m=$(get_field "$1" 2 "=")
     local V=$(get_field "$2" 2 "=")
     du_gitclone_recursive "$pkg" "https://earth.bsc.es/gitlab/amedvede/nemo-build.git" "$V" "$m"
-    cd nemo-build.src
+    cd ${pkg}-${V}.src
+    ln -s ../../env.sh .
     ./dnb.sh :d
-    ./dnb.sh 
+    ./dnb.sh :ubi 
     cd $INSTALL_DIR
     if this_mode_is_set "i" "$m"; then
         mkdir -p "$pkg"-"$V"

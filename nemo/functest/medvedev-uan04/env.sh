@@ -29,9 +29,6 @@ export DNB_NOCMAKE=1
 export DNB_NOCCOMP=1
 export DNB_NOCXXCOMP=1
 
-# Download is slow, so we normally do build in two stages: "./dnb.sh :d" and "./dnb.sh"
-export DEFAULT_BUILD_MODE=":ubi"
-
 source nemo-build.inc
 
 EOM
