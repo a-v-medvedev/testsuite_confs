@@ -34,7 +34,9 @@ export DNB_NOCXXCOMP=1
 # This is because MN4 nodes have no internet access
 export DEFAULT_BUILD_MODE=":ubi"
 
-source nemo-build.inc
+if [ -f nemo-build.inc ]; then
+    source nemo-build.inc
+fi
 
 EOM
     . $script
@@ -47,6 +49,9 @@ EOM
 function env_init {
     local name="$1"
     case "$name" in
+    massivetests)
+        MASSTIVETESTS_CXX=g++
+    ;;
     netcdf-c)
         # put here any specific env. setting before scotch build
     ;;
