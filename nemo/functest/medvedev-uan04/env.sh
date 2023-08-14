@@ -1,11 +1,11 @@
 #!/bin/bash
 
 function env_init_global {
-    echo "=== Specific Environment settings for 'LUMI-C' host ==="
+    echo "=== Specific Environment settings for 'LUMI-G' host ==="
     script=$(mktemp .XXXXXX.sh)
 cat > $script << 'EOM'
 
-module load LUMI/23.03 partition/G PrgEnv-cray/8.3.3 cce/15.0.1 cray-mpich/8.1.25 cray-hdf5/1.12.1.5 cray-netcdf/4.8.1.5 CrayEnv Subversion/1.14.2
+module load LUMI/23.03 partition/G PrgEnv-cray/8.3.3 craype-x86-trento craype-accel-amd-gfx90a cray-fftw/3.3.10.1 cray-hdf5/1.12.1.5 cray-netcdf/4.8.1.5 CrayEnv Subversion/1.14.2
 
 export FC=ftn
 
@@ -17,7 +17,7 @@ export PSUBMIT_OPTS_NGPUS=7
 export PSUBMIT_OPTS_QUEUE_NAME=small
 export PSUBMIT_OPTS_TIME_LIMIT=10
 export PSUBMIT_OPTS_ACCOUNT=project_465000454
-export PSUBMIT_OPTS_INIT_COMMANDS='"module load LUMI/23.03 partition/G PrgEnv-cray/8.3.3 cce/15.0.1 cray-mpich/8.1.25 cray-hdf5/1.12.1.5 cray-netcdf/4.8.1.5"'
+export PSUBMIT_OPTS_INIT_COMMANDS='"module load PrgEnv-cray/8.3.3 craype-x86-trento craype-accel-amd-gfx90a cray-fftw/3.3.10.1 cray-hdf5/1.12.1.5 cray-netcdf/4.8.1.5"'
 export PSUBMIT_OPTS_INJOB_INIT_COMMANDS='"export LD_LIBRARY_PATH=lib:$LD_LIBRARY_PATH"'
 export PSUBMIT_OPTS_MPI_SCRIPT=cray-srun
 export PSUBMIT_OPTS_BATCH_SCRIPT=slurm
@@ -28,6 +28,9 @@ export DNB_NOCUDA=1
 export DNB_NOCMAKE=1
 export DNB_NOCCOMP=1
 export DNB_NOCXXCOMP=1
+
+# Download is slow, so we normally do build in two stages: "./dnb.sh :d" and "./dnb.sh"
+export DEFAULT_BUILD_MODE=":ubi"
 
 source nemo-build.inc
 
@@ -50,10 +53,10 @@ function env_init {
 
     case "$name" in
     netcdf-c)
-        # put here any specific env. setting before build
+        # put here any specific env. setting before scotch build
     ;;
     netcdf-fortran)
-        # put here any specific env. setting before build
+        # put here any specific env. setting before yaml-cpp build
     ;;
     xios)
         export XIOS_HDF5_PATH="$hdf5_path"
