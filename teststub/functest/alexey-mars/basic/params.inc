@@ -17,7 +17,7 @@
 #
 #
 
-export MASSIVE_TESTS_DRIVER="functest"
+#export MASSIVE_TESTS_DRIVER="functest"
 export MASSIVE_TESTS_APPLICATION="teststub"
 
 # Number of sumultaineously queued:
@@ -27,12 +27,11 @@ export MASSIVE_TESTS_NQUEUED=4
 MASSIVE_TESTS_EXEC_REPEATS=3
 
 # Scope:
-export MASSIVE_TESTS_NODES="2 4"
-export MASSIVE_TESTS_PPNS=1
+export MASSIVE_TESTS_PCONFS="2:1 4:1"
 
 # Sizes:
 export MASSIVE_TESTS_WORKPARTS="simple generating waiting"
-export MASSIVE_TESTS_REPEATS="3"
+export MASSIVE_TESTS_WORKPART_PARAMS="3"
 
 # Workloads, sections and params:
 WORKLOADS="xxx yyy"

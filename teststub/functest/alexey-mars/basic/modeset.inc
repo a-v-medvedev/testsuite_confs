@@ -21,9 +21,6 @@
 function set_specific_params() {
     local MODE=$1
     local SUBMODE=$2
-    if [ "$MASSIVE_TESTS_DRIVER" != "functest" ]; then
-        fatal "MASSIVE_TESTS_DRIVER must be functest."
-    fi
     case "$SUBMODE" in
         base)
             ;;
