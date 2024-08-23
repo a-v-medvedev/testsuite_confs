@@ -8,3 +8,4 @@ versions:
 
 target_dirs:
   - [ teststub.bin ]
+...
