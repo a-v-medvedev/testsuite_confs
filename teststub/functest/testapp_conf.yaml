@@ -1,0 +1,10 @@
+---
+packages:
+  - [ teststub ]
+
+versions:
+  - list:
+      - teststub:HEAD
+
+target_dirs:
+  - [ teststub.bin ]
