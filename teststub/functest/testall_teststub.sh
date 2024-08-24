@@ -11,7 +11,6 @@ testdriver="functest"
 
 export TESTSUITE_MODULE="$testdriver"
 export TESTSUITE_PROJECT="$app"
-export TESTSUITE_SCRIPT="functional"
 export TESTSUITE_BRANCH=${1:-${default_branch}}
 export TESTSUITE_CONF_URL=${default_url}
 export TESTSUITE_SUITES="${2:-${default_suites}}"
