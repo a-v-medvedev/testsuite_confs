@@ -1,0 +1,15 @@
+---
+environment:
+#-- Add some module loads if needed
+settings:
+  parallel_level: 4
+  default_mode: ":bi"
+psubmit:
+  nnodes: 1
+  ppn: 1
+  nth: 1
+  ngpus: 1
+  mpi_script: generic
+  batch_script: direct
+per-package:
+...

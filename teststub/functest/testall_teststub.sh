@@ -7,9 +7,7 @@ default_suites="basic"
 
 
 app="teststub"
-testdriver="functest"
 
-export TESTSUITE_MODULE="$testdriver"
 export TESTSUITE_PROJECT="$app"
 export TESTSUITE_BRANCH=${1:-${default_branch}}
 export TESTSUITE_CONF_URL=${default_url}
