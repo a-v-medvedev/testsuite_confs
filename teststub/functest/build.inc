@@ -3,6 +3,12 @@
 function dnb_teststub() {
     generic_prolog "teststub" $* || return 0
     du_github "a-v-medvedev" ""
+	bi_make "" "THIRDPARTY=.." "teststub"
+    i_psubmit_opt
+    generic_epilog
+}
+
+
 #    NOTE: if a project has its own dnb.sh:
 #    ------
 #    if this_mode_is_set "b"; then
@@ -16,7 +22,4 @@ function dnb_teststub() {
 #        cd $DNB_INSTALL_DIR
 #    fi
 #    -------
-	bi_make "" "THIRDPARTY=.." "teststub" 
-    generic_epilog
-}
 
