@@ -9,6 +9,7 @@ psubmit:
   ppn: 1
   nth: 1
   ngpus: 1
+  target_bin: ./teststub
   mpi_script: generic
   batch_script: direct
 per-package:

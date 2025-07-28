@@ -4,7 +4,7 @@ function dnb_teststub() {
     generic_prolog "teststub" $* || return 0
     du_github "a-v-medvedev" ""
 	bi_make "" "THIRDPARTY=.." "teststub"
-    i_psubmit_opt
+    i_generate_psubmit_opt
     generic_epilog
 }
 
