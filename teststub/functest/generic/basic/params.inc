@@ -42,8 +42,3 @@ PARAMETERS="p1"
 MODES="T A C E"
 SUBMODES="always rand50 never"
 
-function get_value() {
-    local line=$1
-    echo "$line" | awk -F '[ :{},]*' '{ for (v=1; v<=NF; v++) { if (flag==1) {flag=0; print $v} if ($v=="Value") flag=1; } }'
-}
-
