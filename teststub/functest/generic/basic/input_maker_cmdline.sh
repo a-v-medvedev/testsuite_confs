@@ -47,8 +47,11 @@ fi
 if [ "$WPRT" == "generating" ]; then
 #    GENERATE="-generate generated.%PSUBMIT_JOBID%.txt"
     GENERATE="-generate generated.%PSUBMIT_JOBID%.txt"
-fi    
-echo "-load input_$WLD.yaml -output result.%PSUBMIT_JOBID%.yaml -timeout $TIMEOUT $MASSIVETEST_AUX_ARGS $GENERATE"
+fi  
+MODEARGS=""
+[ -z "$MASSIVE_TESTS_TESTITEM_MODE" ] || MODEARGS+="-code $MASSIVE_TESTS_TESTITEM_MODE "
+[ -z "$MASSIVE_TESTS_TESTITEM_SUBMODE" ] || MODEARGS+="-mode $MASSIVE_TESTS_TESTITEM_SUBMODE "
+echo "-load input_$WLD.yaml -output result.%PSUBMIT_JOBID%.yaml -timeout $TIMEOUT $MODEARGS $GENERATE"
 exit 0
 
 
