@@ -1,0 +1,11 @@
+---
+packages:
+  - [ mpi-benchmarks ]
+
+versions:
+  - list:
+      - mpi-benchmarks:HEAD
+
+target_dirs:
+  - [ mpi-benchmarks.bin ]
+...
